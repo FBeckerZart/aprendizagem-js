@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/FBeckerZart/exercicios-js#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "express": "4.16.2",
+    "lodash": "^4.17.21",
+    "node-schedule": "1.3.0"
   }
 }
