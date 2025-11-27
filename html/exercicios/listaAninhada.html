@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Projeto</title>
+  <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+  <style>
+    .tree ul {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Projeto</h1>
+<ul class="tree">
+  <li>
+    Backend <button class="toggleButton">Abrir/fechar</button>
+    <ul>
+      <li>
+        app <button class="toggleButton">Abrir/fechar</button>
+        <ul>
+          <li>produto.js</li>
+          <li>usuario.js</li>
+          <li>venda.js</li>
+        </ul>
+      </li>
+      <li>
+        config <button class="toggleButton">Abrir/fechar</button>
+        <ul>
+          <li>banco.js</li>
+          <li>rotas.js</li>
+          <li>servidor.js</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    frontend <button class="toggleButton">Abrir/fechar</button>
+    <ul>
+      <li>
+        public <button class="toggleButton">Abrir/fechar</button>
+        <ul>
+          <li>app.css</li>
+          <li>app.js</li>
+          <li>index.html</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+  const toggleButtons = document.querySelectorAll(".toggleButton");
+
+  toggleButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+      const listItem = event.target.closest("li");
+      const detailsList = listItem.querySelector(":scope > ul");
+
+      if (detailsList) {
+        detailsList.style.display =
+          (detailsList.style.display === "none" || detailsList.style.display === "")
+            ? "block"
+            : "none";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

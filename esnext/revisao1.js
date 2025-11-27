@@ -6,6 +6,7 @@
 }
 console.log(a)
 
+// Template String
 const produto = "Ipad"
 console.log(`${produto} é caro!`)
 
