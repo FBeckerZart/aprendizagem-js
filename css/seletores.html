@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+
+        /* x ~ y -> pegar irmão que não está necessariamente grudado */
+        /* x + y -> pegar irmão mais proximo */
+        /* #xxx > y -> seleciona as div's dentro do local armazenado o ID aninhado */
+        /* [x] -> busca todos os elementos que tem como propriedade x  */
+        /* [x=y] -> busca o atributo x só quando estiver com o valor y  */
+        /* [x*=y] -> para buscar um valor especifo atribuido ao x podendo ser mais de um */
+        /* nth-child(1) -> isso atrelado a outras coisas como span: traz o primeiro filho de alguem do tipo span  */
+        /* nth-child(odd) -> filhos impares */
+        /* nth-child(even) -> filhos pares / esse e o de cima podem ser usados juntos com section > por exemplo */
+        [feira=escritorio]
+            {
+            color: #ff0;
+            background-color: #f77;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>
